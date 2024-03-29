@@ -86,6 +86,6 @@ public class Arithmetic{
 
         return getGenNum().get(0);
     }
-
+    
 }
 
