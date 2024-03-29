@@ -50,6 +50,12 @@ public class Main {
         System.out.println("\nKey arraylist: " + map.getKeys());
         System.out.println("Values arraylist: " + map.getValues());
 
+        // update via put() method
+        map.put(2, 69);
+        map.put(4,9);
+        System.out.println("\nNew Key arraylist via put() method: " + map.getKeys());
+        System.out.println("New Values arraylist via put() method: " + map.getValues());
+
         // get() method
         System.out.println("\nGet key #2: "+ map.get(2));
         System.out.println("Get key #3: "+ map.get(3));
