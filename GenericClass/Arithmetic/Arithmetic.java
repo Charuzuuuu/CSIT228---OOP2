@@ -2,13 +2,12 @@ package Arithmetic;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.lang.Object;
 
 public class Arithmetic{
     private int num1;
     private double num2;
 
-    List<Object> genNum;
+    List<Number> genNum;
 
 
 
@@ -28,12 +27,12 @@ public class Arithmetic{
         return num2;
     }
 
-    public List<Object> getGenNum(){
+    public List<Number> getGenNum(){
         return genNum;
     }
 
     public double add(){
-        double sum = (int) genNum.get(0) + (double) genNum.get(1);
+        double sum = genNum.get(0).intValue() + genNum.get(1).doubleValue();
 
         //just a format to be uniform
         String format = String.format("%.2f", sum);
@@ -42,7 +41,7 @@ public class Arithmetic{
     }
 
     public double subtract(){
-        double subt = (int) genNum.get(0) - (double) genNum.get(1);
+        double subt = genNum.get(0).intValue() - genNum.get(1).doubleValue();
 
         //just a format to be uniform
         String format = String.format("%.2f", subt);
@@ -51,7 +50,7 @@ public class Arithmetic{
     }
 
     public double multiply(){
-        double prod = (int) genNum.get(0) * (double) genNum.get(1);
+        double prod = genNum.get(0).intValue() * genNum.get(1).doubleValue();
 
         //just a format to be uniform
         String format = String.format("%.2f", prod);
@@ -60,7 +59,7 @@ public class Arithmetic{
     }
 
     public double divide(){
-        double quot = (int) genNum.get(0) / (double) genNum.get(1);
+        double quot = genNum.get(0).intValue() / genNum.get(1).doubleValue();
 
         //just a format to be uniform
         String format = String.format("%.2f", quot);
@@ -68,20 +67,20 @@ public class Arithmetic{
         return Double.parseDouble(format);
     }
 
-    public Object getMin(){
+    public Number getMin(){
         String format;
-        if((int) genNum.get(0) < (double) genNum.get(1)){
+        if( genNum.get(0).intValue() < genNum.get(1).doubleValue()){
             return getGenNum().get(0);
         }
 
-        format = String.format("%.2f", genNum.get(1));
+        format = String.format("%.2f", genNum.get(1).doubleValue());
         return Double.parseDouble(format);
     }
 
-    public Object getMax(){
+    public Number getMax(){
         String format;
-        if((int) genNum.get(0) < (double) genNum.get(1)){
-            format = String.format("%.2f", (double) genNum.get(1));
+        if( genNum.get(0).intValue() <  genNum.get(1).doubleValue()){
+            format = String.format("%.2f", genNum.get(1).doubleValue());
             return Double.parseDouble(format);
         }
 
